@@ -1,0 +1,220 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #FDFBF7; /* Soft cream */
+  --foreground: #2D2A26; /* Charcoal */
+  --card: #FFFFFF;
+  --card-foreground: #2D2A26;
+  --popover: #FFFFFF;
+  --popover-foreground: #2D2A26;
+  --primary: #81B29A; /* Sage green */
+  --primary-foreground: #FFFFFF;
+  --secondary: #F4F1EA;
+  --secondary-foreground: #2D2A26;
+  --muted: #F4F1EA;
+  --muted-foreground: #8B877E;
+  --accent: #E07A5F; /* Terracotta */
+  --accent-foreground: #FFFFFF;
+  --destructive: #E07A5F;
+  --destructive-foreground: #FFFFFF;
+  --border: #E5E2DB;
+  --input: #E5E2DB;
+  --ring: #81B29A;
+  --radius: 1rem; /* Rounded friendly corners */
+  
+  --shadow-color: 45deg 2% 80%;
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36), 0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.36), 1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36), 0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36), 2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36), 5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* Themes overrides */
+.theme-loud {
+  /* Theme Sunset */
+  --background: #F4A261; /* Soft orange */
+  --foreground: #FFF9F2;
+  --card: #E76F51; /* Deeper terracotta */
+  --card-foreground: #FFF9F2;
+  --primary: #2A9D8F; /* Teal */
+  --primary-foreground: #FFFFFF;
+  --muted: #E76F51;
+  --muted-foreground: #FFDAB9;
+  --border: #D76548;
+  --accent: #E9C46A; /* Warm yellow */
+  --ring: #2A9D8F;
+  --shadow-color: 15deg 40% 40%;
+}
+
+.theme-cyber-rave {
+  /* Theme Midnight */
+  --background: #1D1A39; /* Deep indigo */
+  --foreground: #E8E5FF;
+  --card: #2B2654;
+  --card-foreground: #E8E5FF;
+  --primary: #C8B6FF; /* Lilac */
+  --primary-foreground: #1D1A39;
+  --muted: #38316B;
+  --muted-foreground: #9C96CC;
+  --border: #443C7A;
+  --accent: #FFB703; /* Amber */
+  --ring: #C8B6FF;
+  --shadow-color: 250deg 20% 10%;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(2deg); }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(0.98); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-gentle-pulse {
+  animation: gentle-pulse 4s ease-in-out infinite;
+}
+
+/* Soft Soundwaves */
+@keyframes soundwave-soft-1 { 0%, 100% { height: 16px; } 50% { height: 32px; } }
+@keyframes soundwave-soft-2 { 0%, 100% { height: 12px; } 50% { height: 24px; } }
+@keyframes soundwave-soft-3 { 0%, 100% { height: 20px; } 50% { height: 40px; } }
+@keyframes soundwave-soft-4 { 0%, 100% { height: 8px; } 50% { height: 18px; } }
+
+.sound-bar-1 { animation: soundwave-soft-1 1s ease-in-out infinite alternate; border-radius: 9999px; }
+.sound-bar-2 { animation: soundwave-soft-2 1.2s ease-in-out infinite alternate; border-radius: 9999px; }
+.sound-bar-3 { animation: soundwave-soft-3 0.8s ease-in-out infinite alternate; border-radius: 9999px; }
+.sound-bar-4 { animation: soundwave-soft-4 1.4s ease-in-out infinite alternate; border-radius: 9999px; }
+
+/* Film Grain */
+.film-grain {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.theme-loud .film-grain { opacity: 0.2; }
+.theme-cyber-rave .film-grain { opacity: 0.15; mix-blend-mode: screen; }
+
+/* Soft Card Elevation */
+.soft-card {
+  box-shadow: var(--shadow-elevation-medium);
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.soft-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px hsl(var(--shadow-color) / 0.4);
+}
+
+/* Thermal receipt paper aesthetics - softened */
+.thermal-receipt {
+  position: relative;
+  background-color: #FFFCF5;
+  color: #4A4640;
+  box-shadow: var(--shadow-elevation-medium);
+  font-family: 'Courier New', Courier, monospace;
+  border-radius: 4px;
+}
+
+.theme-cyber-rave .thermal-receipt {
+  background-color: #F4F1EA; /* Keep receipts looking like paper even in dark mode */
+  color: #2D2A26;
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+.receipt-top-tear {
+  height: 6px;
+  background-image: radial-gradient(circle, transparent 3px, #FFFCF5 3px);
+  background-size: 8px 10px;
+  background-position: top;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.theme-cyber-rave .receipt-top-tear {
+  background-image: radial-gradient(circle, transparent 3px, #F4F1EA 3px);
+}
+
+.receipt-bottom-tear {
+  height: 6px;
+  background-image: radial-gradient(circle, transparent 3px, #FFFCF5 3px);
+  background-size: 8px 10px;
+  background-position: bottom;
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.theme-cyber-rave .receipt-bottom-tear {
+  background-image: radial-gradient(circle, transparent 3px, #F4F1EA 3px);
+}
+
+/* Custom Scrollbar - Soft */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    transition: background-color 0.5s ease, border-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
