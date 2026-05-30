@@ -17,9 +17,9 @@ export default function Home() {
       <Manifesto />
       <Philosophy />
       <HostelRep />
+      <ReceiptsSection />
       <SocialProof />
       <CorePillars />
-      <ReceiptsSection />
       <Impact />
       <RawTape />
       <Contact />

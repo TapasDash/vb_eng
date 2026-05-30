@@ -140,35 +140,6 @@ export function SocialProof() {
     <section className="w-full bg-secondary/30 px-4 py-24 md:py-32 border-t border-border/50">
       <div className="max-w-6xl mx-auto space-y-24">
         
-        {/* SECTION 1: THE HIGHLIGHT TAPES (STORY LINKS) */}
-        <div className="space-y-12">
-          {/* Header matching other sections */}
-          <div className="flex items-center gap-3 mb-12">
-            <Film className="w-8 h-8 text-primary" />
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
-              THE TAPES.
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {highlights.map((item) => (
-              <a 
-                key={item.id}
-                href={item.url}
-                target={item.url === '#' ? undefined : "_blank"}
-                rel="noopener noreferrer"
-                className="block w-full cursor-pointer"
-              >
-                <div className="soft-card aspect-square w-full flex items-center justify-center p-6 text-center select-none group">
-                  <span className="text-2xl md:text-3xl font-bold tracking-widest text-foreground uppercase group-hover:text-primary transition-colors">
-                    {item.title}
-                  </span>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-
         {/* SECTION 2: THE SURVEILLANCE FEED (IG EMBEDS) */}
         <div className="space-y-12">
           {/* Header matching other sections */}
@@ -220,6 +191,35 @@ export function SocialProof() {
                   </p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* SECTION 1: THE HIGHLIGHT ARCHIVE (STORY LINKS) */}
+        <div className="space-y-12">
+          {/* Header matching other sections */}
+          <div className="flex items-center gap-3 mb-12">
+            <Film className="w-8 h-8 text-primary" />
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
+              THE ARCHIVE.
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {highlights.map((item) => (
+              <a 
+                key={item.id}
+                href={item.url}
+                target={item.url === '#' ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                className="block w-full cursor-pointer"
+              >
+                <div className="soft-card aspect-square w-full flex items-center justify-center p-6 text-center select-none group">
+                  <span className="text-2xl md:text-3xl font-bold tracking-widest text-foreground uppercase group-hover:text-primary transition-colors">
+                    {item.title}
+                  </span>
+                </div>
+              </a>
             ))}
           </div>
         </div>
