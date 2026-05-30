@@ -167,7 +167,7 @@ export function VibeController() {
   const status = getVibeStatus(vibeLevel);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 font-sans">
+    <div className="hidden md:block fixed bottom-6 right-6 z-50 font-sans">
       <div 
         className="soft-card p-5 w-72 md:w-80 transition-all duration-500 bg-card rounded-2xl border border-border flex flex-col relative overflow-hidden"
         onMouseEnter={() => setShowTooltip(true)}
