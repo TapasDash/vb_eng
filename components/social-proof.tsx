@@ -16,14 +16,14 @@ interface EmbedItem {
 
 const highlights: HighlightItem[] = [
   {
-    id: "chiang-mai-highlight",
-    title: "CHIANG MAI TAPES",
-    url: "https://www.instagram.com/p/DSsgK6NAcyw/?img_index=7" 
+    id: "street-cricket",
+    title: "STREET CRICKET (SLIDE 7)",
+    url: "https://www.instagram.com/p/DSsgK6NAcyw/?img_index=7"
   },
   {
-    id: "cody-highlight",
-    title: "CODY CULT",
-    url: "https://www.instagram.com/stories/highlights/18094025729504254/" 
+    id: "pai-cult",
+    title: "PAI CULT HIGHLIGHTS",
+    url: "https://www.instagram.com/stories/highlights/18094025729504254/"
   }
 ];
 
