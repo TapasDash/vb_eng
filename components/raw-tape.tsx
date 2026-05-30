@@ -113,36 +113,6 @@ export function RawTape() {
 
           {/* Right: Media select checklist (lg:col-span-4) */}
           <div className="lg:col-span-4 flex flex-col justify-between gap-6 z-10 select-none">
-            <div className="soft-card p-6 flex-1 flex flex-col gap-4 bg-card border border-border/50">
-              <div className="flex items-center gap-2 border-b border-border/50 pb-4 mb-2">
-                <Disc className="w-5 h-5 text-muted-foreground" />
-                <h4 className="font-bold text-foreground">Media Archive</h4>
-              </div>
-              
-              <div className="flex flex-col gap-3">
-                {mediaList.map((media) => (
-                  <button
-                    key={media.id}
-                    onClick={() => handleMediaSwitch(media)}
-                    className={`text-left p-4 transition-all cursor-pointer rounded-xl flex flex-col shadow-sm border ${
-                      activeMedia.id === media.id
-                        ? 'border-primary bg-primary/5 text-primary'
-                        : 'border-border/50 bg-background text-muted-foreground hover:border-primary/50'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between w-full mb-2">
-                      <span className="text-sm font-bold">{media.name}</span>
-                      {activeMedia.id === media.id ? (
-                        <Video className="w-4 h-4" />
-                      ) : (
-                        <Film className="w-4 h-4 opacity-40" />
-                      )}
-                    </div>
-                    <span className="text-xs opacity-80">{media.desc}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
 
             {/* Offline disclaimer box */}
             <div className="soft-card p-5 bg-secondary/30 border border-border/50 text-muted-foreground text-sm leading-relaxed">
