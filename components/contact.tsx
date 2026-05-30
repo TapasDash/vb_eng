@@ -67,14 +67,14 @@ export function Contact() {
 
           {/* Link 2: Email */}
           <a 
-            href="mailto:tapasdash017@gmail.com"
+            href="mailto:tapasdahs017@gmail.com"
             className="flex flex-col justify-center items-start p-12 bg-background hover:bg-foreground hover:text-background text-foreground transition-colors duration-300 group rounded-none"
           >
             <span className="text-xs uppercase tracking-widest text-muted-foreground group-hover:text-background/70 mb-4 font-mono rounded-none">
               EMAIL
             </span>
             <span className="text-2xl md:text-4xl font-black tracking-tighter break-all uppercase rounded-none">
-              tapasdash017@gmail.com
+              tapasdahs017@gmail.com
             </span>
           </a>
         </div>
