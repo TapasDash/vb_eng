@@ -28,6 +28,53 @@
   --shadow-color: 45deg 2% 80%;
   --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36), 0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.36), 1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.36);
   --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36), 0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36), 2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36), 5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+
+  /* Modal open / close transition tokens (transitions-dev) */
+  --modal-open-dur: 250ms;
+  --modal-close-dur: 150ms;
+  --modal-scale: 0.96;
+  --modal-scale-close: 0.96;
+  --modal-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Modal open / close transitions */
+[data-slot="dialog-overlay"],
+[data-slot="alert-dialog-overlay"] {
+  transition: opacity var(--modal-open-dur) var(--modal-ease);
+}
+[data-slot="dialog-overlay"][data-state="open"],
+[data-slot="alert-dialog-overlay"][data-state="open"] {
+  opacity: 1;
+}
+[data-slot="dialog-overlay"][data-state="closed"],
+[data-slot="alert-dialog-overlay"][data-state="closed"] {
+  opacity: 0;
+  transition-duration: var(--modal-close-dur);
+}
+
+[data-slot="dialog-content"],
+[data-slot="alert-dialog-content"] {
+  transition: opacity var(--modal-open-dur) var(--modal-ease), transform var(--modal-open-dur) var(--modal-ease);
+}
+[data-slot="dialog-content"][data-state="open"],
+[data-slot="alert-dialog-content"][data-state="open"] {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+[data-slot="dialog-content"][data-state="closed"],
+[data-slot="alert-dialog-content"][data-state="closed"] {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(var(--modal-scale-close));
+  transition-duration: var(--modal-close-dur);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-slot="dialog-overlay"],
+  [data-slot="alert-dialog-overlay"],
+  [data-slot="dialog-content"],
+  [data-slot="alert-dialog-content"] {
+    transition: none !important;
+  }
 }
 
 @theme inline {

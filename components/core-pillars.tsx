@@ -32,7 +32,7 @@ export function CorePillars() {
               </div>
               <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Event Hosting</h3>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Bringing people together and throwing great day parties without needing liquid courage.
+                Igniting day parties, poolside hangs, and night crawls with 100% natural, infectious energy.
               </p>
             </div>
           </div>
@@ -46,9 +46,9 @@ export function CorePillars() {
                 </div>
                 <span className="font-sans font-bold text-4xl text-muted/30 group-hover:text-primary/10 transition-colors duration-300">02</span>
               </div>
-              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Crowd Connection</h3>
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors font-sans">Crowd Connection</h3>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Breaking the ice, connecting solo travelers, and making sure everyone in the hostel feels included.
+                Sensing who's quiet, drawing solo travelers into the circle, and making every guest feel seen.
               </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ export function CorePillars() {
               </div>
               <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Real Proof</h3>
               <p className="text-base leading-relaxed text-muted-foreground">
-                Real reviews and history from hosting events across Thailand, Vietnam, and beyond.
+                Unfiltered reviews and real history from hosting hostel crowds across Thailand, Vietnam, and beyond.
               </p>
             </div>
           </div>

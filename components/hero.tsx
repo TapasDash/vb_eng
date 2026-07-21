@@ -201,7 +201,7 @@ export function Hero() {
           <div className="soft-card px-8 py-4 rounded-full flex items-center gap-3 backdrop-blur-md bg-card/90">
             <Terminal className="w-5 h-5 text-primary animate-gentle-pulse" />
             <p className="text-lg md:text-xl font-medium text-foreground tracking-wide">
-              Sober. Strategic. Event Producer. I don't chase the vibe, I engineer it.
+              Sober. Intuitive. Community Host. I don't chase the crowd's energy, I feel it, shape it, and make strangers feel like family.
             </p>
           </div>
         </div>

@@ -35,8 +35,7 @@ export function Contact() {
             className="underline hover:text-primary transition-colors font-bold"
           >
             Pai Cult Story Highlights
-          </a>{" "}
-          —{" "}
+          </a>,{" "}
           <a 
             href="https://instagram.com/awkbeardo" 
             target="_blank" 

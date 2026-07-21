@@ -44,7 +44,7 @@ const experiences: HostelExperience[] = [
     location: 'Pai',
     role: 'High-Volume Energy Architect.',
     action: "Ran massive beer pong tournaments and legendary quiz nights. Invented completely new games to keep a high-energy crowd guessing, then led the pub crawls. To lock in the crowd, I launched the 'Pai Circus Social' WhatsApp group.",
-    roi: 'Direct ranking growth through pure hospitality. My events got guests writing specific, 5-star Hostelworld reviews because the energy was unmatched. I scaled their social infrastructure on the ground and online.',
+    roi: 'Direct ranking growth through pure hospitality. My events got guests writing specific, 5-star Hostelworld reviews because the energy was unmatched. I built a real social heartbeat on the ground and carried it into lasting online group chats.',
     reference: 'DM the manager, David, at @pai_circus_hostel and ask about Tapas.',
     igHandle: '@pai_circus_hostel',
     igLink: 'https://www.instagram.com/pai_circus_hostel/'
@@ -70,7 +70,7 @@ export function HostelRep() {
               I don't drink.
             </h3>
             <p className="text-lg md:text-xl leading-relaxed text-muted-foreground mb-8">
-              Which means I actually do the job. I build the culture, scale the energy, and push your Hostelworld ranking up. Here is the proof.
+              Which means I actually show up for your guests. I ignite genuine community, keep the vibe electric, and drive glowing Hostelworld reviews. Here is the proof.
             </p>
 
             <div className="flex flex-wrap gap-3 text-xs font-medium tracking-wide select-none">

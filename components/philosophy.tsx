@@ -81,21 +81,21 @@ export function Philosophy() {
             title="Authenticity"
             icon={ShieldCheck}
             number="01"
-            description="No liquid courage. I bring good energy just by being myself."
+            description="Zero alcohol required. Pure, magnetic presence that brings people out of their shell."
           />
           
           <TiltCard 
             title="Independence"
             icon={HeartCrack}
             number="02"
-            description="I'm here to host and have fun. I don't chase the party—I make it happen."
+            description="I don't wait for a party to happen, I spark the flame and let everyone shine."
           />
 
           <TiltCard 
             title="Community"
             icon={Layers}
             number="03"
-            description="I build communities that are genuine, organic, and built to last. Connections that go beyond the hostel room."
+            description="Creating deep, authentic bonds that stick long after the backpacks are packed."
           />
         </div>
       </div>

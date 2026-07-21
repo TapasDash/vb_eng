@@ -8,7 +8,7 @@ export function Manifesto() {
   const { vibeLevel } = useVibe();
   const [typedText, setTypedText] = React.useState('');
   const [isDone, setIsDone] = React.useState(false);
-  const fullText = "I don't drink. I'm an ambivert. I know exactly when to turn the energy up to 100, and when to let people chill. I don't need liquid courage to get a room mingling. While other reps get sloppy, I observe the dynamics, scale the energy, and control the chaos with a clear head. Just reality. No bullshit.";
+  const fullText = "I don't touch a drop of alcohol. I'm an ambivert, I read a room's heart before I ever open my mouth. While others rely on booze to break the ice or get too wasted to notice who's left out in the corner, I stand in the middle with absolute clarity. I feel the shift, when to ignite a crowd into laughter, when to turn the energy all the way up, and when to let strangers just sit together and feel at home. No cheap tricks. No liquid courage. Just raw human connection, real presence, and unforgettable nights.";
 
   // Simple typewriter effect
   React.useEffect(() => {
